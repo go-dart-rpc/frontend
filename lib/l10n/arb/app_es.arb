@@ -2,6 +2,22 @@
     "@@locale": "es",
     "counterAppBarTitle": "Contador",
     "@counterAppBarTitle": {
-        "description": "Texto mostrado en la AppBar de la página del contador"
+        "description": "Texto mostrado en la AppBar de la página del Contador"
+    },
+    "homeAppBarTitle": "Inicio",
+    "@homeAppBarTitle": {
+        "description": "Texto mostrado en la AppBar de la página del Inicio"
+    },
+    "loginAppBarTitle": "Acceso",
+    "@loginAppBarTitle": {
+        "description": "Texto mostrado en la AppBar de la página del Acceso"
+    },
+    "registerAppBarTitle": "Registrarse",
+    "@registerAppBarTitle": {
+        "description": "Texto mostrado en la AppBar de la página del Registrarse"
+    },
+    "recoverAppBarTitle": "Recuperar",
+    "@registerAppBarTitle": {
+        "description": "Texto mostrado en la AppBar de la página del Recuperar"
     }
 }

@@ -7,7 +7,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:frontend/counter/counter.dart';
+import 'package:frontend/features/counter/counter.dart';
+import 'package:frontend/features/home/home.dart';
+import 'package:frontend/features/login/login.dart';
+import 'package:frontend/features/recover/recover.dart';
+import 'package:frontend/features/register/register.dart';
 import 'package:frontend/l10n/l10n.dart';
 
 class App extends StatelessWidget {
@@ -27,7 +31,24 @@ class App extends StatelessWidget {
         GlobalMaterialLocalizations.delegate,
       ],
       supportedLocales: AppLocalizations.supportedLocales,
-      home: const CounterPage(),
+      initialRoute: '/',
+      routes: {
+        // When navigating to the "/counter" route, build the CounterScreen widget.
+        '/counter': (context) => const CounterPage(),
+
+        // When navigating to the "/register" route, build the RegisterScreen widget.
+        '/register': (context) => const RegisterPage(),
+
+        // When navigating to the "/register" route, build the RegisterScreen widget.
+        '/recover': (context) => const RecoverPage(),
+
+        // When navigating to the "/login" route, build the LoginScreen widget.
+        '/login': (context) => const LoginPage(),
+
+        // When navigating to the "/home" route, build the HomeScreen widget.
+        '/home': (context) => const HomePage(),
+        '/': (context) => const HomePage(),
+      },
     );
   }
 }

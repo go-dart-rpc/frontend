@@ -3,5 +3,21 @@
     "counterAppBarTitle": "Counter",
     "@counterAppBarTitle": {
         "description": "Text shown in the AppBar of the Counter Page"
+    },
+    "homeAppBarTitle": "Home",
+    "@homeAppBarTitle": {
+        "description": "Text shown in the AppBar of the Home Page"
+    },
+    "loginAppBarTitle": "Login",
+    "@loginAppBarTitle": {
+        "description": "Text shown in the AppBar of the Login Page"
+    },
+    "registerAppBarTitle": "Register",
+    "@registerAppBarTitle": {
+        "description": "Text shown in the AppBar of the Register Page"
+    },
+    "recoverAppBarTitle": "Recover",
+    "@registerAppBarTitle": {
+        "description": "Text shown in the AppBar of the Recover Page"
     }
 }

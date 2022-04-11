@@ -7,41 +7,41 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:frontend/counter/counter.dart';
+import 'package:frontend/features/register/register.dart';
 import 'package:frontend/l10n/l10n.dart';
 
-class CounterPage extends StatelessWidget {
-  const CounterPage({Key? key}) : super(key: key);
+class RegisterPage extends StatelessWidget {
+  const RegisterPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (_) => CounterCubit(),
-      child: const CounterView(),
+      create: (_) => RegisterCubit(),
+      child: const RegisterView(),
     );
   }
 }
 
-class CounterView extends StatelessWidget {
-  const CounterView({Key? key}) : super(key: key);
+class RegisterView extends StatelessWidget {
+  const RegisterView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final l10n = context.l10n;
     return Scaffold(
-      appBar: AppBar(title: Text(l10n.counterAppBarTitle)),
-      body: const Center(child: CounterText()),
+      appBar: AppBar(title: Text(l10n.registerAppBarTitle)),
+      body: const Center(child: RegisterText()),
       floatingActionButton: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           FloatingActionButton(
-            onPressed: () => context.read<CounterCubit>().increment(),
+            onPressed: () => context.read<RegisterCubit>().increment(),
             child: const Icon(Icons.add),
           ),
           const SizedBox(height: 8),
           FloatingActionButton(
-            onPressed: () => context.read<CounterCubit>().decrement(),
+            onPressed: () => context.read<RegisterCubit>().decrement(),
             child: const Icon(Icons.remove),
           ),
         ],
@@ -50,13 +50,13 @@ class CounterView extends StatelessWidget {
   }
 }
 
-class CounterText extends StatelessWidget {
-  const CounterText({Key? key}) : super(key: key);
+class RegisterText extends StatelessWidget {
+  const RegisterText({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final count = context.select((CounterCubit cubit) => cubit.state);
+    final count = context.select((RegisterCubit cubit) => cubit.state);
     return Text('$count', style: theme.textTheme.headline1);
   }
 }
