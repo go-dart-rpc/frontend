@@ -19,7 +19,24 @@ extension PumpApp on WidgetTester {
           GlobalMaterialLocalizations.delegate,
         ],
         supportedLocales: AppLocalizations.supportedLocales,
-        home: widget,
+        initialRoute: '/',
+        routes: {
+        // When navigating to the "/counter" route, build the CounterScreen widget.
+        '/counter': (context) => widget,
+
+        // When navigating to the "/register" route, build the RegisterScreen widget.
+        '/register': (context) => widget,
+
+        // When navigating to the "/register" route, build the RegisterScreen widget.
+        '/recover': (context) => widget,
+
+        // When navigating to the "/login" route, build the LoginScreen widget.
+        '/login': (context) => widget,
+
+        // When navigating to the "/home" route, build the HomeScreen widget.
+        '/home': (context) => widget,
+        '/': (context) => widget,
+      },
       ),
     );
   }
